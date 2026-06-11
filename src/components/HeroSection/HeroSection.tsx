@@ -3,6 +3,7 @@ import styles from "./HeroSection.module.css";
 
 interface HeroSectionProps {
   latestDetection: Detection | null;
+  detections: Detection[];
   totalCount: number;
   totalWeight: number;
 }
@@ -12,8 +13,22 @@ function formatWeight(g: number): string {
   return `${g} g`;
 }
 
+function getDateRange(detections: Detection[]): string {
+  if (detections.length === 0) return "No data yet";
+  const dates = detections.map((d) => new Date(d.createdAt).getTime());
+  const earliest = new Date(Math.min(...dates));
+  const latest = new Date(Math.max(...dates));
+
+  const fmt = (d: Date) =>
+    d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+
+  if (earliest.toDateString() === latest.toDateString()) return fmt(earliest);
+  return `${fmt(earliest)} – ${fmt(latest)}`;
+}
+
 export default function HeroSection({
   latestDetection,
+  detections,
   totalCount,
   totalWeight,
 }: HeroSectionProps) {
@@ -50,14 +65,7 @@ export default function HeroSection({
                 <line x1="8" y1="2" x2="8" y2="6" />
                 <line x1="3" y1="10" x2="21" y2="10" />
               </svg>
-              June 15–17, 2024
-            </span>
-            <span className={styles.metaItem}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              Greenwood Park, SF
+              {getDateRange(detections)}
             </span>
           </div>
 
@@ -73,10 +81,6 @@ export default function HeroSection({
                 {formatWeight(totalWeight)}
               </span>
               <span className={styles.statLabel}>Collected</span>
-            </div>
-            <div className={styles.stat}>
-              <span className={styles.statValue}>850</span>
-              <span className={styles.statLabel}>Active</span>
             </div>
           </div>
         </div>

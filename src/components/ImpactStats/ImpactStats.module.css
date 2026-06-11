@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   animation: fadeInUp 0.5s ease 0.25s both;
 }
@@ -24,15 +24,16 @@
 
 .darkValue {
   font-family: var(--font-display);
-  font-size: 1.75rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--on-primary);
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .darkLabel {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--primary-fixed-dim);
+  line-height: 1.5;
 }
 
 /* Light card */
@@ -53,19 +54,21 @@
 
 .lightValue {
   font-family: var(--font-display);
-  font-size: 1.75rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--primary);
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .lightLabel {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--on-surface-variant);
+  line-height: 1.5;
 }
 
 /* Wide card */
 .wideCard {
+  grid-column: 1 / -1;
   background: var(--surface-container-low);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
@@ -83,21 +86,22 @@
 
 .wideValue {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--primary);
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .wideLabel {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--outline);
-  max-width: 140px;
+  line-height: 1.5;
 }
 
 .sparkline {
   flex-shrink: 0;
 }
+
 
 @media (max-width: 768px) {
   .grid {

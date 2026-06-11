@@ -75,6 +75,7 @@ export default function ZeroFestPage() {
       {/* Hero */}
       <HeroSection
         latestDetection={data?.latestDetection ?? null}
+        detections={data?.detections ?? []}
         totalCount={data?.totalCount ?? 0}
         totalWeight={data?.totalWeight ?? 0}
       />
