@@ -1,0 +1,65 @@
+.card {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+  animation: fadeInUp 0.5s ease both;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--on-surface);
+  margin-bottom: 1.5rem;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.barGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.barHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.barLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--on-surface);
+}
+
+.barGoal {
+  font-size: 0.8rem;
+  color: var(--outline);
+}
+
+.barPercent {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--on-surface);
+  font-variant-numeric: tabular-nums;
+}
+
+.track {
+  height: 8px;
+  background: var(--surface-container-high);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 4px;
+  animation: progressFill 1.5s ease both;
+  transition: width 0.5s ease;
+}

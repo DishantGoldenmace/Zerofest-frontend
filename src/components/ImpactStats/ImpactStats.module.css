@@ -1,0 +1,112 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  animation: fadeInUp 0.5s ease 0.25s both;
+}
+
+/* Dark green card */
+.darkCard {
+  background: var(--primary-container);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  box-shadow: var(--shadow-card);
+}
+
+.icon {
+  color: var(--primary-fixed);
+  margin-bottom: 0.5rem;
+}
+
+.darkValue {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--on-primary);
+  line-height: 1.1;
+}
+
+.darkLabel {
+  font-size: 0.8rem;
+  color: var(--primary-fixed-dim);
+}
+
+/* Light card */
+.lightCard {
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  box-shadow: var(--shadow-card);
+}
+
+.co2Icon {
+  margin-bottom: 0.5rem;
+}
+
+.lightValue {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.lightLabel {
+  font-size: 0.8rem;
+  color: var(--on-surface-variant);
+}
+
+/* Wide card */
+.wideCard {
+  background: var(--surface-container-low);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card);
+}
+
+.wideLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.wideValue {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.wideLabel {
+  font-size: 0.75rem;
+  color: var(--outline);
+  max-width: 140px;
+}
+
+.sparkline {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wideCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}

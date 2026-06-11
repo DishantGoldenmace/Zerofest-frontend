@@ -1,0 +1,155 @@
+.wrapper {
+  animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.sectionTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+  padding-left: 4px;
+}
+
+.tableContainer {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  padding: 0.85rem 1.25rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-table-header);
+}
+
+.table tbody tr {
+  transition: background var(--transition-fast);
+  animation: fadeInUp 0.4s ease both;
+}
+
+.table tbody tr:nth-child(1) { animation-delay: 0.05s; }
+.table tbody tr:nth-child(2) { animation-delay: 0.1s; }
+.table tbody tr:nth-child(3) { animation-delay: 0.15s; }
+.table tbody tr:nth-child(4) { animation-delay: 0.2s; }
+.table tbody tr:nth-child(5) { animation-delay: 0.25s; }
+.table tbody tr:nth-child(6) { animation-delay: 0.3s; }
+.table tbody tr:nth-child(7) { animation-delay: 0.35s; }
+.table tbody tr:nth-child(8) { animation-delay: 0.4s; }
+.table tbody tr:nth-child(9) { animation-delay: 0.45s; }
+.table tbody tr:nth-child(10) { animation-delay: 0.5s; }
+
+.table tbody tr:hover {
+  background: var(--bg-card-hover);
+}
+
+.table tbody td {
+  padding: 0.85rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(56, 189, 148, 0.06);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.time {
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+}
+
+.classificationBadge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.plastic {
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--color-plastic);
+}
+
+.paper {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--color-paper);
+}
+
+.aluminum {
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--color-aluminum);
+}
+
+.glass {
+  background: rgba(6, 182, 212, 0.12);
+  color: var(--color-glass);
+}
+
+.organic {
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--color-organic);
+}
+
+.metal {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--color-metal);
+}
+
+.other {
+  background: rgba(107, 114, 128, 0.12);
+  color: var(--color-other);
+}
+
+.weight {
+  font-variant-numeric: tabular-nums;
+}
+
+.weightUnit {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-left: 2px;
+}
+
+.confidence {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.deviceId {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+@media (max-width: 600px) {
+  .table thead th,
+  .table tbody td {
+    padding: 0.7rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .table thead th:first-child,
+  .table tbody td:first-child {
+    padding-left: 1rem;
+  }
+}
