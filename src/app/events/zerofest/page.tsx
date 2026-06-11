@@ -83,7 +83,7 @@ export default function ZeroFestPage() {
       {/* Dashboard Grid */}
       <div className={styles.dashboard}>
         <div className={styles.topRow}>
-          <EventProgress />
+          <LiveFeed detections={data?.detections ?? []} />
           <WasteDistribution
             distribution={data?.distribution ?? []}
             totalCount={data?.totalCount ?? 0}
@@ -91,7 +91,7 @@ export default function ZeroFestPage() {
         </div>
 
         <div className={styles.bottomRow}>
-          <LiveFeed detections={data?.detections ?? []} />
+          <EventProgress />
           <ImpactStats />
         </div>
       </div>
